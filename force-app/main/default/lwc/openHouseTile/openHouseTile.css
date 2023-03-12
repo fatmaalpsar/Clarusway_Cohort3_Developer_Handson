@@ -1,0 +1,12 @@
+:host {
+	--sds-c-card-color-background: linear-gradient(180deg, rgba(255,255,255,1) 80%, #fae8d2 100%);
+}
+.bear-tile {
+	display: block;
+	border: (--lwc-borderWidthThin, 1px) solid #5c9668;
+	border-radius: .25rem;
+	background-color: #308d4c;
+}
+.bear-silhouette {
+	height: 100px;
+}

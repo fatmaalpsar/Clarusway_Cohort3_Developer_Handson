@@ -1,0 +1,25 @@
+<template>
+	<lightning-card title="Open House Shows" icon-name="utility:agent_home">
+		<div class="slds-card__body slds-card__body_inner">
+			<!-- Start openhouse list -->
+			<template if:true={homes.data}>
+				<lightning-layout multiple-rows="true" pull-to-boundary="small">
+					<template for:each={homes.data} for:item="home">
+						<lightning-layout-item key={home.Id} size="3" class="slds-var-p-around_x-small">
+							<!-- Start bear tile -->
+							<c-open-house-tile home={home}></c-open-house-tile>
+							<!-- End bear tile -->
+						</lightning-layout-item>
+					</template>
+				</lightning-layout>
+			</template>
+			<!-- End bear list -->
+			<!-- Data failed to load -->
+			<template if:true={homes.error}>
+				<div class="slds-text-color_error">
+					An error occurred while loading the bear list
+				</div>
+			</template>
+		</div>
+	</lightning-card>
+</template>

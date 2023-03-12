@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title={home.Name} class="bear-tile">
+        <div slot="actions">
+            <lightning-button-icon
+                icon-name="utility:search"
+                icon-class="bear-tile-button"
+                variant="bare"
+                alternative-text="Open record"
+                onclick={handleOpenRecordClick}>
+            </lightning-button-icon>
+        </div>
+        <div class="slds-var-p-horizontal_small bear-tile-body">
+            <div class="slds-media">
+                <div class="slds-media__figure">
+                    <img src={appResources.homeLogo} alt="home profile" class="bear-silhouette"/>
+                </div>
+                <div class="slds-media__body">
+                    <p class="slds-var-m-bottom_xx-small">{home.Name}</p>
+                    <p class="slds-var-m-bottom_xx-small">{home.Show_Date__c} </p>
+                    <p class="slds-var-m-bottom_xx-small"><lightning-formatted-date-time value={home.Start_Time__c} hour="2-digit" minute="2-digit" 
+                    ></lightning-formatted-date-time> </p>
+                    <p class="slds-var-m-bottom_xx-small"><lightning-formatted-date-time value={home.End_Time__c} hour="2-digit" minute="2-digit" 
+                        ></lightning-formatted-date-time> </p>
+                    <p class="slds-var-m-bottom_xx-small">{home.Remaining_Number_Visitors__c} Available Invitation Left </p>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>
