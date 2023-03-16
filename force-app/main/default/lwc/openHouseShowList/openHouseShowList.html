@@ -7,7 +7,7 @@
 					<template for:each={homes.data} for:item="home">
 						<lightning-layout-item key={home.Id} size="3" class="slds-var-p-around_x-small">
 							<!-- Start bear tile -->
-							<c-open-house-tile home={home}></c-open-house-tile>
+							<c-open-house-tile home={home}  onhomeview={handleHomeView}></c-open-house-tile>
 							<!-- End bear tile -->
 						</lightning-layout-item>
 					</template>

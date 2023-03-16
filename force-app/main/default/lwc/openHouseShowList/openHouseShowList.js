@@ -1,13 +1,22 @@
+import { NavigationMixin } from 'lightning/navigation';
 import { LightningElement, wire } from 'lwc';
-import homeResources from '@salesforce/resourceUrl/ursus_park';
+
 /** BearController.getAllBears() Apex method */
 import getRecordsApex from "@salesforce/apex/OpenHouseShowList.GetRecords";
-export default class HomeList extends LightningElement {
+export default class HomeList extends NavigationMixin (LightningElement) {
 	@wire(getRecordsApex) homes;
-	
-	appResources = {
-		homeLogo: `${homeResources}/smallhome.png`,
-	};
+
+	handleHomeView(event) {
+		// Get bear record id from bearview event
+		const homeId = event.target.value;
+		// Navigate to bear record page
+		this[NavigationMixin.Navigate]({
+			type: 'standard__recordPage',
+			attributes: {
+				recordId: homeId,
+				objectApiName: 'Open_House_Show__c',
+				actionName: 'view',
+			},
 	
 }
-
+		)}}

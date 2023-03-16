@@ -3,7 +3,7 @@
 }
 .bear-tile {
 	display: block;
-	border: (--lwc-borderWidthThin, 1px) solid #5c9668;
+	border: (--lwc-borderWidthThin, var(--lwc-borderWidthThin, 1px)) solid #5c9668;
 	border-radius: .25rem;
 	background-color: #308d4c;
 }
