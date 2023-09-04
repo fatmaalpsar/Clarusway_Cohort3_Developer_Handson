@@ -19,7 +19,8 @@ export default class getOpenHouseShowDataTable extends LightningElement {
             type: 'date',
             typeAttributes:{
                 hour: "2-digit",
-                minute: "2-digit"
+                minute: "2-digit",
+                time-zone="America/New_York",
             },
             sortable: true
         },
@@ -29,7 +30,8 @@ export default class getOpenHouseShowDataTable extends LightningElement {
             type: 'date',
             typeAttributes:{
                 hour: "2-digit",
-                minute: "2-digit"
+                minute: "2-digit",
+                time-zone="America/New_York",
             },
             sortable: true
         },
